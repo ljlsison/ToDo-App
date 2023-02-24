@@ -13,6 +13,12 @@ function App() {
 
   }
 
+  const deleteTask = (id) => {
+    setTasks(prevState => prevState.filter(task => task.id !== id))
+  }
+
+
+
   return (
     <div className="container">
       <header>
@@ -21,6 +27,7 @@ function App() {
       <CustomForm addTask={addTask}/>
       {tasks && (
         <TaskList 
+          deleteTask={deleteTask}
           tasks={tasks}
         />
       )}

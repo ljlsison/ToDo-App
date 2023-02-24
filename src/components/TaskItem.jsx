@@ -5,7 +5,7 @@ import styles from './TaskItem.module.css'
 import { CheckIcon } from '@heroicons/react/24/outline'
 import { PencilSquareIcon, TrashIcon } from '@heroicons/react/24/solid'
 
-const TaskItem = ({task,deleteTask}) => {
+const TaskItem = ({task,deleteTask,toggleTask}) => {
 
     const [isChecked, setIsChecked] = useState(task.checked)
     
